@@ -306,8 +306,7 @@ class Audio2Beats(Audio2Frames):
 
 
 class File2Beats(Audio2Beats):
-    def __call__(self, audio_path):
-        signal, sr = load_audio(audio_path)
+    def __call__(self, signal, sr):
         return super().__call__(signal, sr)
 
 
